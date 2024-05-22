@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <>
       <ambientLight intensity={2} />
-      <OrbitControls enableZoom={false} />
+      {/* <OrbitControls enableZoom={false} /> */}
       <ScrollControls pages={3} damping={0.25}>
         <Overlay />
         <Office />
