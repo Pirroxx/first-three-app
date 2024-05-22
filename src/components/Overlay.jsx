@@ -5,16 +5,18 @@ import { useState } from "react";
 const Section = (props) => {
   return (
     <section
-      className={`h-screen flex flex-col justify-center p-10 ${
+      className={`h-screen flex flex-col justify-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 ${
         props.right ? "items-end" : "items-start"
       }`}
       style={{
         opacity: props.opacity,
       }}
     >
-      <div className="w-1/2 flex items-center  justify-center">
-        <div className="max-w-sm w-full ">
-          <div className="bg-white rounded-md px-8 py-12">{props.children}</div>
+      <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 flex items-center justify-center">
+        <div className="max-w-sm w-full">
+          <div className="bg-white bg-opacity-50 rounded-md px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16">
+            {props.children}
+          </div>
         </div>
       </div>
     </section>
@@ -35,26 +37,32 @@ export const Overlay = () => {
 
   return (
     <Scroll html>
-      <div class="w-screen">
+      <div className="w-screen">
         <Section opacity={opacityFirstSection}>
-          <h1 className="font-semibold font-serif text-2xl">
+          <h1 className="font-semibold  text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             Hello, I'm Gent Hulaj
           </h1>
-          <p className="text-gray-500">Welcome to my first Three js Project</p>
-          <p className="mt-3">I know:</p>
-          <ul className="leading-9">
+          <p className="text-gray-500 text-sm sm:text-base md:text-lg">
+            Welcome to my first Three js Project
+          </p>
+          <p className="mt-3 text-sm sm:text-base md:text-lg">I know:</p>
+          <ul className="leading-7 sm:leading-8 md:leading-9">
             <li>🧑‍💻 How to code</li>
             <li>🧑‍🏫 How to learn</li>
             <li>📦 How to deliver</li>
           </ul>
-          <p className="animate-bounce  mt-6">↓</p>
+          <p className="animate-bounce mt-6 text-base sm:text-lg md:text-xl">
+            ↓
+          </p>
         </Section>
         <Section right opacity={opacitySecondSection}>
-          <h1 className="font-semibold font-serif text-2xl">
+          <h1 className="font-semibold  text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             Here are my skillsets 🔥
           </h1>
-          <p className="text-gray-500">PS: I never test</p>
-          <ul className="leading-9">
+          <p className="text-gray-500 text-sm sm:text-base md:text-lg">
+            PS: I never test
+          </p>
+          <ul className="leading-7 sm:leading-8 md:leading-9">
             <li>ReactJS</li>
             <li>Tailwind</li>
             <li>ThreeJS</li>
@@ -62,17 +70,18 @@ export const Overlay = () => {
             <li>Git</li>
             <li>GSAP</li>
           </ul>
-
-          <p className="animate-bounce  mt-6">↓</p>
+          <p className="animate-bounce mt-6 text-base sm:text-lg md:text-xl">
+            ↓
+          </p>
         </Section>
         <Section opacity={opacityLastSection}>
-          <h1 className="font-semibold font-serif text-2xl">
+          <h1 className="font-semibold  text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             🤙 Call me maybe?
           </h1>
-          <p className="text-gray-500">
+          <p className="text-gray-500 text-sm sm:text-base md:text-lg">
             I'm very expensive but you won't regret it
           </p>
-          <p className="mt-6 p-3 bg-slate-200 rounded-lg">
+          <p className="mt-6 p-3 bg-slate-200 rounded-lg text-sm sm:text-base md:text-lg">
             📞 <a href="tel:(+383) 49-702-694">(+383) 49-702-694</a>
           </p>
         </Section>
