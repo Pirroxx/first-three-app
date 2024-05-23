@@ -14,7 +14,7 @@ const Section = (props) => {
     >
       <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 flex items-center justify-center">
         <div className="max-w-sm w-full">
-          <div className="bg-white bg-opacity-50 rounded-md px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16">
+          <div className="bg-gray-800 bg-opacity-70 rounded-md px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16">
             {props.children}
           </div>
         </div>
@@ -37,12 +37,12 @@ export const Overlay = () => {
 
   return (
     <Scroll html>
-      <div className="w-screen">
+      <div className="w-screen text-white">
         <Section opacity={opacityFirstSection}>
-          <h1 className="font-semibold  text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+          <h1 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             Hello, I'm Gent Hulaj
           </h1>
-          <p className="text-gray-500 text-sm sm:text-base md:text-lg">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg">
             Welcome to my first Three js Project
           </p>
           <p className="mt-3 text-sm sm:text-base md:text-lg">I know:</p>
@@ -56,10 +56,10 @@ export const Overlay = () => {
           </p>
         </Section>
         <Section right opacity={opacitySecondSection}>
-          <h1 className="font-semibold  text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+          <h1 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             Here are my skillsets 🔥
           </h1>
-          <p className="text-gray-500 text-sm sm:text-base md:text-lg">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg">
             PS: I never test
           </p>
           <ul className="leading-7 sm:leading-8 md:leading-9">
@@ -75,13 +75,13 @@ export const Overlay = () => {
           </p>
         </Section>
         <Section opacity={opacityLastSection}>
-          <h1 className="font-semibold  text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+          <h1 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             🤙 Call me maybe?
           </h1>
-          <p className="text-gray-500 text-sm sm:text-base md:text-lg">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg">
             I'm very expensive but you won't regret it
           </p>
-          <p className="mt-6 p-3 bg-slate-200 rounded-lg text-sm sm:text-base md:text-lg">
+          <p className="mt-6 p-3 bg-white bg-opacity-70 text-black rounded text-sm sm:text-base md:text-lg">
             📞 <a href="tel:(+383) 49-702-694">(+383) 49-702-694</a>
           </p>
         </Section>
