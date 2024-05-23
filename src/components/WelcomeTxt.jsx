@@ -12,7 +12,6 @@ const WelcomeTxt = () => {
       { opacity: 0 },
       {
         opacity: 1,
-
         duration: 2,
         stagger: 0.05,
         ease: "power3.out",
@@ -23,15 +22,17 @@ const WelcomeTxt = () => {
   return (
     <div
       ref={textRef}
-      className="min-h-screen flex justify-center items-center text-6xl font-bold text-white"
+      className="min-h-screen flex justify-center items-center font-bold text-white text-center px-4"
     >
-      {"Oh, look who came! We were expecting you."
-        .split("")
-        .map((char, index) => (
-          <span key={index} className="inline-block m-1">
-            {char}
-          </span>
-        ))}
+      <div className="lg:text-5xl sm:text-4xl xs:text-2xl w-full sm:w-3/4 xs:w-full">
+        {"Oh, look who came! We were expecting you."
+          .split("")
+          .map((char, index) => (
+            <span key={index} className="inline-block m-1">
+              {char}
+            </span>
+          ))}
+      </div>
     </div>
   );
 };

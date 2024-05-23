@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Canvas } from "@react-three/fiber";
 import styles from "./page.module.css";
@@ -13,6 +13,17 @@ gsap.registerPlugin(useGSAP);
 const Page = () => {
   const welcomeTextRef = useRef(null);
   const canvasRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  const handlePlayPause = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   useGSAP(() => {
     const tl = gsap.timeline();

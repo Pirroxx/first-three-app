@@ -13,7 +13,7 @@ const Section = (props) => {
       }}
     >
       <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 flex items-center justify-center">
-        <div className="max-w-sm w-full">
+        <div className="max-w-[31rem] w-full  ">
           <div className="bg-gray-800 bg-opacity-70 rounded-md px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16">
             {props.children}
           </div>
@@ -43,7 +43,7 @@ export const Overlay = () => {
             Hello, I'm Gent Hulaj
           </h1>
           <p className="text-gray-300 text-sm sm:text-base md:text-lg">
-            Welcome to my first Three js Project
+            Welcome to Three js Project
           </p>
           <p className="mt-3 text-sm sm:text-base md:text-lg">I know:</p>
           <ul className="leading-7 sm:leading-8 md:leading-9">
